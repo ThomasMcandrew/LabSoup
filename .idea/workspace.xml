@@ -6,34 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f8dc-8c3b-4bd3-ab78-e0591330cb81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/META-INF/LabSoup.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/Launcher$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/Launcher$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/Launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/Launcher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/center/CenterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/center/CenterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/center/CloseableTab.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/center/CloseableTab.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/center/panels/TextFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/center/panels/TextFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/left/FileTree$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/left/FileTree$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/left/FileTree$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/left/FileTree$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/left/FileTree$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/left/FileTree$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/left/FileTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/left/FileTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/right/RightPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/right/RightPanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/right/RightPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/right/RightPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/FileUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/FileUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/files/BlindUtils$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/files/BlindUtils$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/files/BlindUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/files/BlindUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/center/CenterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/center/CenterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/center/CloseableTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/center/CloseableTab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/center/panels/TextFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/center/panels/TextFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/left/FileTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/left/FileTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/right/RightPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/right/RightPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/utils/FileUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/utils/files/BlindUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/utils/files/BlindUtils.java" afterDir="false" />
-    </list>
+    <list default="true" id="d422f8dc-8c3b-4bd3-ab78-e0591330cb81" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -120,7 +93,7 @@
       <workItem from="1600743034229" duration="361000" />
       <workItem from="1601081559054" duration="3682000" />
       <workItem from="1601217178329" duration="663000" />
-      <workItem from="1602174827339" duration="294000" />
+      <workItem from="1602174827339" duration="601000" />
     </task>
     <servers />
   </component>
@@ -222,11 +195,6 @@
           <url>file://$PROJECT_DIR$/src/soup/center/CenterController.java</url>
           <line>54</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/soup/utils/files/BlindUtils.java</url>
-          <line>82</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
