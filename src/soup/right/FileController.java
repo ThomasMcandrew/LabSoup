@@ -25,10 +25,29 @@ public class FileController extends AbstractController {
         JLabel split = new JLabel("Split folder by substring. use ',' to separate values");
         JTextField folders = new JTextField(12);
         JButton run = new JButton("Run");
+        JLabel useOther = new JLabel("Use other File format");
+        JCheckBox useOtherFileFormat = new JCheckBox();
+        JTextField fileFormat = new JTextField(5);
+        fileFormat.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                useOtherFileFormat.setSelected(true);
+            }
+        });
         run.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                BlindUtils.BlindFolder(controller, panel.file,folders.getText(),".jpg");
+                if(useOtherFileFormat.isSelected()){
+                    String ext;
+                    if(fileFormat.getText().startsWith(".")){
+                        ext = fileFormat.getText();
+                    }else{
+                        ext = "." + fileFormat.getText();
+                    }
+                    BlindUtils.BlindFolder(controller, panel.file, folders.getText(), ext);
+                }else {
+                    BlindUtils.BlindFolder(controller, panel.file, folders.getText(), ".jpg");
+                }
             }
         });
 
@@ -36,6 +55,9 @@ public class FileController extends AbstractController {
         add(blind);
         add(split);
         add(folders);
+        add(useOther);
+        add(useOtherFileFormat);
+        add(fileFormat);
         add(run);
     }
 

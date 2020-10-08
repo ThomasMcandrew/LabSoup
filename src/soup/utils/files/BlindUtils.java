@@ -80,9 +80,14 @@ public class BlindUtils {
                         if(data[j][1] != null) {
                             if (data[j][1].compareTo(sub[k]) == 0) {
                                 try {
-                                    String fileExt = files[i].getAbsolutePath().substring(files[i].getAbsolutePath().lastIndexOf('.'));
-                                    Files.copy(files[i].toPath(),
-                                            new File(subFolder[k].getAbsolutePath() + File.separator + data[j][4] + fileExt).toPath());
+                                    if(ext == null) {
+                                        String fileExt = files[i].getAbsolutePath().substring(files[i].getAbsolutePath().lastIndexOf('.'));
+                                        Files.copy(files[i].toPath(),
+                                                new File(subFolder[k].getAbsolutePath() + File.separator + data[j][4] + fileExt).toPath());
+                                    }else{
+                                        Files.copy(files[i].toPath(),
+                                                new File(subFolder[k].getAbsolutePath() + File.separator + data[j][4] + ext).toPath());
+                                    }
                                 } catch (IOException e) {
                                     e.printStackTrace();
                                 }
