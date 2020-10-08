@@ -19,6 +19,7 @@ public class BlindUtils {
         String[] sub =  separateFolder.split(",");
         File[] subFolder = new File[sub.length + 1];
         for(int i = 0; i < sub.length; i++){
+            sub[i] = sub[i].trim();
             subFolder[i] = new File(out.getAbsolutePath() + File.separator + sub[i]);
             subFolder[i].mkdir();
         }
@@ -79,8 +80,9 @@ public class BlindUtils {
                         if(data[j][1] != null) {
                             if (data[j][1].compareTo(sub[k]) == 0) {
                                 try {
+                                    String fileExt = files[i].getAbsolutePath().substring(files[i].getAbsolutePath().lastIndexOf('.'));
                                     Files.copy(files[i].toPath(),
-                                            new File(subFolder[k].getAbsolutePath() + File.separator + data[j][4] + ext).toPath());
+                                            new File(subFolder[k].getAbsolutePath() + File.separator + data[j][4] + fileExt).toPath());
                                 } catch (IOException e) {
                                     e.printStackTrace();
                                 }

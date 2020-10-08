@@ -19,10 +19,12 @@ public class RightPanel extends JPanel {
     private CSVController CSV;
     private TextController TEXT;
     private FileController FILE;
+    private ImageController IMAGE;
     private String NullPanel = "NULL";
     private String CSVString = "CSV";
     private String TextString = "TEXT";
     private String FIleString = "FILE";
+    private String ImageString = "IMAGE";
     public RightPanel(CenterController controller, int width, int height){
         this.controller = controller;
         thisPanel = this;
@@ -47,10 +49,12 @@ public class RightPanel extends JPanel {
         CSV = new CSVController(controller);
         TEXT = new TextController(controller);
         FILE = new FileController(controller);
+        IMAGE = new ImageController(controller);
         add(nullPanel, NullPanel);
         add(CSV,CSVString);
         add(TEXT,TextString);
         add(FILE, FIleString);
+        add(IMAGE,ImageString);
         controller.addChangeListener(new ChangeListener() {
             @Override
             public void stateChanged(ChangeEvent e) {
@@ -66,6 +70,10 @@ public class RightPanel extends JPanel {
                     case ".csv":
                         layout.show(thisPanel,CSVString);
                         CSV.setPanel(current);
+                        break;
+                    case ".png":
+                        layout.show(thisPanel,ImageString);
+                        IMAGE.setPanel(current);
                         break;
                     case "\\":
                         layout.show(thisPanel,FIleString);

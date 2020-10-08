@@ -29,7 +29,10 @@ public class CloseableTab extends JPanel {
         close.setPreferredSize(new Dimension(25,25));
         add(label);
         add(close);
-
     }
+    public void setName(String name){
+        label.setText(name);
+    }
+
 
 }

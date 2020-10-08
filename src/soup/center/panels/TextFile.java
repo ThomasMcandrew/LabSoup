@@ -56,6 +56,8 @@ public class TextFile extends AbstractPanel {
         p.add(textArea);
         scroller = new JScrollPane(p);
 
+
+
         add(scroller);
     }
 

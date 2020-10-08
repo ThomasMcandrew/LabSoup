@@ -3,9 +3,9 @@ package soup.left;
 import soup.center.CenterController;
 
 import javax.swing.*;
-import javax.swing.event.TreeSelectionEvent;
-import javax.swing.event.TreeSelectionListener;
+import javax.swing.event.*;
 import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.ExpandVetoException;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -33,12 +33,19 @@ public class FileTree extends JPanel implements MouseListener {
         root = new DefaultMutableTreeNode(rootFile.getName());
         helper(rootFile,root);
         tree = new JTree(root);
-        tree.addTreeSelectionListener(new TreeSelectionListener() {
 
-           @Override
-           public void valueChanged(TreeSelectionEvent e) {
-               helper((FileNode)(((DefaultMutableTreeNode) (tree.getLastSelectedPathComponent())).getUserObject()), (DefaultMutableTreeNode) tree.getLastSelectedPathComponent());
-           }
+        tree.addTreeWillExpandListener(new TreeWillExpandListener() {
+            @Override
+            public void treeWillExpand(TreeExpansionEvent event) throws ExpandVetoException {
+
+                helper((FileNode)(((DefaultMutableTreeNode) (event.getPath().getLastPathComponent())).getUserObject()), (DefaultMutableTreeNode) event.getPath().getLastPathComponent());
+
+            }
+
+            @Override
+            public void treeWillCollapse(TreeExpansionEvent event) throws ExpandVetoException {
+
+            }
         });
         add(tree);
         repaint();
@@ -76,7 +83,7 @@ public class FileTree extends JPanel implements MouseListener {
             openFolder.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    controller.openDirectory((FileNode)(((DefaultMutableTreeNode) (tree.getLastSelectedPathComponent())).getUserObject()));
+                    controller.openDirectory((FileNode)(((DefaultMutableTreeNode) ( tree.getLastSelectedPathComponent())).getUserObject()));
                 }
             });
             pop.add(openFolder);
