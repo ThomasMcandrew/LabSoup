@@ -1,5 +1,6 @@
 package soup.center.panels;
 
+import soup.center.CenterController;
 import soup.right.CSVController;
 import soup.utils.FileUtils;
 
@@ -15,8 +16,8 @@ import java.util.Scanner;
 public class CSVFile extends AbstractPanel {
 
     private JTable table;
-    public CSVFile(File file, int width, int height) {
-        super(file, ".csv", width, height);
+    public CSVFile(CenterController centerController, File file, int width, int height) {
+        super(centerController, file, ".csv", width, height);
     }
 
 
@@ -25,8 +26,8 @@ public class CSVFile extends AbstractPanel {
     }
 
     @Override
-    public AbstractPanel newPanel(File file, int width, int height) {
-        return new CSVFile(file,width,height);
+    public AbstractPanel newPanel(CenterController centerController, File file, int width, int height) {
+        return new CSVFile(centerController,file,width,height);
     }
 
     @Override

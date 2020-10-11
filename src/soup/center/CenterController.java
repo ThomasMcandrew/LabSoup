@@ -1,10 +1,7 @@
 package soup.center;
 
-import soup.center.panels.AbstractPanel;
-import soup.center.panels.CSVFile;
-import soup.center.panels.FileExplorer;
+import soup.center.panels.*;
 import soup.center.panels.Image;
-import soup.center.panels.TextFile;
 import soup.left.FileNode;
 
 import javax.swing.*;
@@ -21,8 +18,8 @@ public class CenterController extends JTabbedPane implements MouseListener, Mous
 
     public static int CUR_WIDTH,CUR_HEIGHT;
     private int width, height;
-    private static AbstractPanel[] panels = new AbstractPanel[]{new TextFile(null,0,0),new CSVFile(null,0,0),new Image(null,".png",0,0),
-            new Image(null,".jpg",0,0)};
+    private static AbstractPanel[] panels = new AbstractPanel[]{new TextFile(null,null,0,0),new CSVFile(null,null,0,0),new Image(null,null,".png",0,0),
+            new Image(null,null, ".jpg",0,0),new LayeredImage(null,null,0,0)};
     private ArrayList<AbstractPanel> openPanels;
     public CenterController(int width, int height){
         this.width = width;
@@ -58,13 +55,13 @@ public class CenterController extends JTabbedPane implements MouseListener, Mous
 
     public void openFileAsText(FileNode node){openFileAsText(node.file);}
     public void openFileAsText(File file){
-        TextFile temp = new TextFile(file,width,height);
+        TextFile temp = new TextFile(this, file,width,height);
         newPanel(file.getName(),temp);
     }
 
     public void openDirectory(FileNode fileNode){openDirectory(fileNode.file); }
     public void openDirectory(File file){
-        FileExplorer ex = new FileExplorer(file,width,height);
+        FileExplorer ex = new FileExplorer(this, file,width,height);
         newPanel(file.getName(),ex);
     }
 
@@ -82,7 +79,7 @@ public class CenterController extends JTabbedPane implements MouseListener, Mous
         String ext = file.getAbsolutePath().substring(file.getAbsolutePath().lastIndexOf("."));
         for(int i = 0; i < panels.length; i++){
             if(ext.endsWith(panels[i].ext)){
-                AbstractPanel temp = panels[i].newPanel(file, width, height);
+                AbstractPanel temp = panels[i].newPanel(this,file, width, height);
                 newPanel(file.getName(), temp);
                 setSelectedComponent(temp);
                 set = true;
@@ -90,7 +87,7 @@ public class CenterController extends JTabbedPane implements MouseListener, Mous
             }
         }
         if(!set){
-            AbstractPanel temp = panels[0].newPanel(file, width, height);
+            AbstractPanel temp = panels[0].newPanel(this,file, width, height);
             newPanel(file.getName(), temp);
             setSelectedComponent(temp);
         }

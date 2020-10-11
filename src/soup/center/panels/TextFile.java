@@ -1,5 +1,6 @@
 package soup.center.panels;
 
+import soup.center.CenterController;
 import soup.right.TextController;
 import soup.utils.FileUtils;
 
@@ -16,15 +17,15 @@ import java.util.Scanner;
 public class TextFile extends AbstractPanel {
 
     private JTextArea textArea;
-    public TextFile(File file,int width,int height){
-        super(file, ".txt",width,height);
+    public TextFile(CenterController centerController, File file, int width, int height){
+        super(centerController, file, ".txt",width,height);
     }
 
 
 
     @Override
-    public AbstractPanel newPanel(File file,int width, int height) {
-        return new TextFile(file,width, height);
+    public AbstractPanel newPanel(CenterController centerController, File file,int width, int height) {
+        return new TextFile(centerController, file,width, height);
     }
 
     @Override

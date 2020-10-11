@@ -14,7 +14,17 @@ import java.util.Random;
 public class BlindUtils {
 
     public static void BlindFolder(CenterController controller, File file, String separateFolder, String ext){
-        File out = new File(file.getAbsolutePath().substring(0,file.getAbsolutePath().lastIndexOf(File.separator)) + File.separator +"output");
+        String dirname = file.getAbsolutePath().substring(file.getAbsolutePath().lastIndexOf(File.separator)+1);
+        File out = new File(file.getAbsolutePath().substring(0,file.getAbsolutePath().lastIndexOf(File.separator)) + File.separator + dirname +"(output)");
+        if(out.exists()){
+            int num = 0;
+            File temp = new File(out.getAbsolutePath() + "("+num+")");
+            while(temp.exists()){
+                num++;
+                temp = new File(out.getAbsolutePath() + "("+num+")");
+            }
+            out = temp;
+        }
         out.mkdir();
         String[] sub =  separateFolder.split(",");
         File[] subFolder = new File[sub.length + 1];

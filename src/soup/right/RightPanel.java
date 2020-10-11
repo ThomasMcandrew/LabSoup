@@ -20,11 +20,13 @@ public class RightPanel extends JPanel {
     private TextController TEXT;
     private FileController FILE;
     private ImageController IMAGE;
+    private GifController GIF;
     private String NullPanel = "NULL";
     private String CSVString = "CSV";
     private String TextString = "TEXT";
     private String FIleString = "FILE";
     private String ImageString = "IMAGE";
+    private String GifString = "GIF";
     public RightPanel(CenterController controller, int width, int height){
         this.controller = controller;
         thisPanel = this;
@@ -50,11 +52,13 @@ public class RightPanel extends JPanel {
         TEXT = new TextController(controller);
         FILE = new FileController(controller);
         IMAGE = new ImageController(controller);
+        GIF = new GifController(controller);
         add(nullPanel, NullPanel);
         add(CSV,CSVString);
         add(TEXT,TextString);
         add(FILE, FIleString);
         add(IMAGE,ImageString);
+        add(GIF,GifString);
         controller.addChangeListener(new ChangeListener() {
             @Override
             public void stateChanged(ChangeEvent e) {
@@ -74,6 +78,10 @@ public class RightPanel extends JPanel {
                     case ".png":
                         layout.show(thisPanel,ImageString);
                         IMAGE.setPanel(current);
+                        break;
+                    case ".gif":
+                        layout.show(thisPanel,GifString);
+                        GIF.setPanel(current);
                         break;
                     case "\\":
                         layout.show(thisPanel,FIleString);

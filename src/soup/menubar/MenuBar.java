@@ -2,6 +2,7 @@ package soup.menubar;
 
 import soup.center.panels.AbstractPanel;
 import soup.center.panels.CSVFile;
+import soup.center.panels.LayeredImage;
 import soup.center.panels.TextFile;
 import soup.display.MainFrame;
 
@@ -19,6 +20,8 @@ public class MenuBar extends JMenuBar {
         fileInit();
     }
 
+
+
     private void fileInit(){
         file = new JMenu("File");
         JMenu createNewFile = new JMenu("Create New File");
@@ -26,18 +29,26 @@ public class MenuBar extends JMenuBar {
         newText.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mainFrame.mainPanel.centerController.newPanel("new",new TextFile(null,0,0));
+                mainFrame.mainPanel.centerController.newPanel("new",new TextFile(mainFrame.mainPanel.centerController,null,0,0));
             }
         });
         JMenuItem newCsv = new JMenuItem("CSV");
         newCsv.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mainFrame.mainPanel.centerController.newPanel("new",new CSVFile(null,0,0));
+                mainFrame.mainPanel.centerController.newPanel("new",new CSVFile(mainFrame.mainPanel.centerController,null,0,0));
+            }
+        });
+        JMenuItem newGif = new JMenuItem("Layered Image");
+        newGif.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mainFrame.mainPanel.centerController.newPanel("new",new LayeredImage(mainFrame.mainPanel.centerController,null,0,0));
             }
         });
         createNewFile.add(newText);
         createNewFile.add(newCsv);
+        createNewFile.add(newGif);
         file.add(createNewFile);
 
         JMenuItem saveAs = new JMenuItem("Save As");

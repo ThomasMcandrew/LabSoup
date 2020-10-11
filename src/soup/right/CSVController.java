@@ -27,7 +27,6 @@ public class CSVController extends AbstractController {
     @Override
     protected void init() {
         initMathPanel();
-
     }
 
 

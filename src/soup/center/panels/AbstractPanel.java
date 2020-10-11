@@ -13,9 +13,11 @@ public abstract class AbstractPanel extends JPanel {
     public String ext;
     protected int width,height;
     protected AbstractController controller;
-    public AbstractPanel(File file, String ext,int width, int height){
+    protected CenterController centerController;
+    public AbstractPanel(CenterController centerController, File file, String ext,int width, int height){
         this.file = file;
         this.ext = ext;
+        this.centerController = centerController;
         if(width == 0 && height == 0){
             this.width = CenterController.CUR_WIDTH;
             this.height = CenterController.CUR_HEIGHT;
@@ -29,7 +31,7 @@ public abstract class AbstractPanel extends JPanel {
 
     }
 
-    public abstract AbstractPanel newPanel(File file,int width, int height);
+    public abstract AbstractPanel newPanel(CenterController centerController, File file,int width, int height);
     public abstract String saveFile();
     protected void loadFile(){
         loadFile(file);
