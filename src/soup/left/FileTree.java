@@ -17,8 +17,9 @@ public class FileTree extends JPanel implements MouseListener {
     private JTree tree;
     private DefaultMutableTreeNode root;
     private CenterController controller;
+    private File file;
     public FileTree(CenterController controller){
-        File file = new File(System.getProperty("user.home"));
+        file = new File(System.getProperty("user.home"));
         setBackground(Color.WHITE);
         makeFileTreeRecursive(file);
         this.controller = controller;

@@ -8,6 +8,12 @@ import javax.swing.*;
 import javax.swing.event.AncestorEvent;
 import javax.swing.event.AncestorListener;
 import java.awt.*;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -52,15 +58,17 @@ public class TextFile extends AbstractPanel {
         JScrollPane scroller;
         textArea = new JTextArea();
         textArea.setLineWrap(true);
-        textArea.setPreferredSize(new Dimension(width - 20, height));
-        JPanel p = new JPanel();
-        p.add(textArea);
-        scroller = new JScrollPane(p);
-
-
-
+        scroller = new JScrollPane(textArea);
+        addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                super.componentResized(e);
+                scroller.setPreferredSize(new Dimension(getWidth() - 20, getHeight()));
+            }
+        });
         add(scroller);
     }
+
 
     @Override
     public void loadFile(File file) {
