@@ -7,27 +7,28 @@ import soup.utils.FileUtils;
 import javax.swing.*;
 import javax.swing.event.AncestorEvent;
 import javax.swing.event.AncestorListener;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.text.BadLocationException;
 import java.awt.*;
-import java.awt.event.ComponentAdapter;
-import java.awt.event.ComponentEvent;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+import java.awt.event.*;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class TextFile extends AbstractPanel {
 
     private JTextArea textArea;
+
     public TextFile(CenterController centerController, File file, int width, int height){
         super(centerController, file, ".txt",width,height);
     }
-
-
 
     @Override
     public AbstractPanel newPanel(CenterController centerController, File file,int width, int height) {
@@ -55,6 +56,8 @@ public class TextFile extends AbstractPanel {
     }
 
     private void initTextArea(){
+
+
         JScrollPane scroller;
         textArea = new JTextArea();
         textArea.setLineWrap(true);
@@ -66,8 +69,11 @@ public class TextFile extends AbstractPanel {
                 scroller.setPreferredSize(new Dimension(getWidth() - 20, getHeight()));
             }
         });
+
         add(scroller);
     }
+
+
 
 
     @Override
@@ -92,6 +98,7 @@ public class TextFile extends AbstractPanel {
 
         }
     }
+
 
 
 }
