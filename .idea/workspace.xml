@@ -8,12 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d422f8dc-8c3b-4bd3-ab78-e0591330cb81" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/center/panels/TextFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/center/panels/TextFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/files/BlindUtils$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/files/BlindUtils$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/files/BlindUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/files/BlindUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/center/panels/TextFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/center/panels/TextFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/right/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/right/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/utils/files/BlindUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/utils/files/BlindUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +96,7 @@
       <workItem from="1601081559054" duration="3682000" />
       <workItem from="1601217178329" duration="663000" />
       <workItem from="1602174827339" duration="25219000" />
+      <workItem from="1602542455280" duration="607000" />
     </task>
     <servers />
   </component>
