@@ -6,29 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f8dc-8c3b-4bd3-ab78-e0591330cb81" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/center/CenterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/center/CenterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/center/panels/TextFile$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/center/panels/TextFile$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/center/panels/TextFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/center/panels/TextFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/display/MainPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/display/MainPanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/display/MainPanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/display/MainPanel$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/display/MainPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/display/MainPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/menubar/MenuBar$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/menubar/MenuBar$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/right/FileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/right/FileController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/right/RightPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/right/RightPanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/right/RightPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/right/RightPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/right/TextController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/right/TextController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/FileUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/FileUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/center/CenterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/center/CenterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/center/panels/TextFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/center/panels/TextFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/display/MainPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/display/MainPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/menubar/MenuBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/menubar/MenuBar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/right/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/right/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/right/RightPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/right/RightPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/right/TextController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/right/TextController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/utils/FileUtils.java" afterDir="false" />
-    </list>
+    <list default="true" id="d422f8dc-8c3b-4bd3-ab78-e0591330cb81" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,7 +95,7 @@
       <workItem from="1601217178329" duration="663000" />
       <workItem from="1602174827339" duration="25219000" />
       <workItem from="1602542455280" duration="23346000" />
-      <workItem from="1602677095028" duration="1640000" />
+      <workItem from="1602677095028" duration="2344000" />
     </task>
     <servers />
   </component>
