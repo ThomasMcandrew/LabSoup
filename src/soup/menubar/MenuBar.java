@@ -29,7 +29,7 @@ public class MenuBar extends JMenuBar {
         newText.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mainFrame.mainPanel.centerController.newPanel("new",new TextFile(mainFrame.mainPanel.centerController,null,0,0));
+                mainFrame.mainPanel.centerController.newPanel("new",new TextFile(mainFrame.mainPanel.centerController,null,".txt",0,0));
             }
         });
         JMenuItem newCsv = new JMenuItem("CSV");

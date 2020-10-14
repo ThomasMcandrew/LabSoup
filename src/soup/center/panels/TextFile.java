@@ -26,13 +26,16 @@ public class TextFile extends AbstractPanel {
 
     private JTextArea textArea;
 
-    public TextFile(CenterController centerController, File file, int width, int height){
-        super(centerController, file, ".txt",width,height);
+    public TextFile(CenterController centerController, File file,String ext, int width, int height){
+        super(centerController, file, ext,width,height);
     }
 
     @Override
-    public AbstractPanel newPanel(CenterController centerController, File file,int width, int height) {
-        return new TextFile(centerController, file,width, height);
+    public AbstractPanel newPanel(CenterController centerController, File file, int width, int height) {
+        if(file == null){
+            return new TextFile(centerController, null,".txt",width, height);
+        }
+        return new TextFile(centerController, file,file.getAbsolutePath().substring(file.getAbsolutePath().lastIndexOf(".")),width, height);
     }
 
     @Override
@@ -94,8 +97,6 @@ public class TextFile extends AbstractPanel {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-
-
         }
     }
 

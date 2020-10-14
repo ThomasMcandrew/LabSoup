@@ -7,6 +7,7 @@ import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FilenameFilter;
 import java.io.IOException;
 
 public class FileUtils {
@@ -78,13 +79,34 @@ public class FileUtils {
     public static File saveTextFile() {
         final JFileChooser fc = new JFileChooser();
         fc.setMultiSelectionEnabled(false);
-        fc.addChoosableFileFilter(new FileNameExtensionFilter("Text File", ".txt"));
+
+        FileNameExtensionFilter[] filters = new FileNameExtensionFilter[]{new FileNameExtensionFilter("Text File", ".txt"),
+                new FileNameExtensionFilter("Python", ".py"),
+                new FileNameExtensionFilter("HyperText Markup Language (HTML)", ".html", ".htm", ".xhtml", ".shtml", ".jhtml"),
+                new FileNameExtensionFilter("Java", ".java",".class"),
+                new FileNameExtensionFilter("Ruby", ".rb",".rhtml"),
+                new FileNameExtensionFilter("JavaScript", ".js"),
+                new FileNameExtensionFilter("PHP", ".php", ".php4", ".php3", ".phtml"),
+                new FileNameExtensionFilter("XML", ".xml"),
+                new FileNameExtensionFilter("CSS", ".css"),
+                new FileNameExtensionFilter("Comma Separated Value", ".csv"),
+                new FileNameExtensionFilter("LOG", ".log"),
+                new FileNameExtensionFilter("YAML document", ".yml"),
+                new FileNameExtensionFilter("README text document", ".readme")};
+        for(int i = 0; i < filters.length; i++) {
+            fc.addChoosableFileFilter(filters[i]);
+        }
         fc.setAcceptAllFileFilterUsed(true);
         int returnVal = fc.showSaveDialog(null);
         if(returnVal == JFileChooser.APPROVE_OPTION) {
             File file = fc.getSelectedFile();
-            if(!file.getAbsolutePath().endsWith(".txt")){
-                file = new File(file.getAbsolutePath() + ".txt");
+            String check = file.getAbsolutePath().substring(file.getAbsolutePath().lastIndexOf(File.separator));
+            if(!check.contains(".")){
+                for(int i = 0; i < filters.length; i++){
+                    if(fc.getFileFilter() == filters[i]){
+                        file = new File(file.getAbsolutePath() + filters[i].getExtensions()[0]);
+                    }
+                }
             }
             return file;
         }

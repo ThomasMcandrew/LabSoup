@@ -3,6 +3,7 @@ package soup.right;
 import soup.center.CenterController;
 import soup.center.panels.AbstractPanel;
 import soup.center.panels.CSVFile;
+import soup.right.dumbControllers.TypeRaceController;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
@@ -21,12 +22,14 @@ public class RightPanel extends JPanel {
     private FileController FILE;
     private ImageController IMAGE;
     private GifController GIF;
+    private TypeRaceController RACE;
     private String NullPanel = "NULL";
     private String CSVString = "CSV";
     private String TextString = "TEXT";
     private String FIleString = "FILE";
     private String ImageString = "IMAGE";
     private String GifString = "GIF";
+    private String RaceString = "RACE";
     public RightPanel(CenterController controller, int width, int height){
         this.controller = controller;
         thisPanel = this;
@@ -53,12 +56,14 @@ public class RightPanel extends JPanel {
         FILE = new FileController(controller);
         IMAGE = new ImageController(controller);
         GIF = new GifController(controller);
+        RACE = new TypeRaceController(controller);
         add(nullPanel, NullPanel);
         add(CSV,CSVString);
         add(TEXT,TextString);
         add(FILE, FIleString);
         add(IMAGE,ImageString);
         add(GIF,GifString);
+        add(RACE,RaceString);
         controller.addChangeListener(new ChangeListener() {
             @Override
             public void stateChanged(ChangeEvent e) {
@@ -86,6 +91,10 @@ public class RightPanel extends JPanel {
                     case "\\":
                         layout.show(thisPanel,FIleString);
                         FILE.setPanel(current);
+                        break;
+                    case "race":
+                        layout.show(thisPanel,RaceString);
+                        RACE.setPanel(current);
                         break;
                     default:
                         layout.show(thisPanel,NullPanel);

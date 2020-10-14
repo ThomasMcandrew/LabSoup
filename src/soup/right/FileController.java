@@ -17,14 +17,14 @@ import java.beans.PropertyChangeListener;
 public class FileController extends AbstractController {
 
     private FileExplorer panel;
-
+    private JPanel blindPanel;
     public FileController(CenterController controller) {
         super(controller);
     }
 
 
     private void initBlind(){
-        JPanel blindPanel = new JPanel();
+        blindPanel = new JPanel();
 
         JLabel blind = new JLabel("Blind Files");
         JLabel split = new JLabel("Split folder by substring. use ',' to separate values");
@@ -94,8 +94,6 @@ public class FileController extends AbstractController {
         c.gridx = 0;
         c.gridy = 0;
         c.gridwidth = 3;
-        //blindPanel.add(blind,c);
-        //c.gridy++;
         blindPanel.add(split,c);
         c.gridy++;
         blindPanel.add(folders,c);
@@ -137,5 +135,6 @@ public class FileController extends AbstractController {
     @Override
     protected void setPanel(AbstractPanel panel) {
         this.panel = (FileExplorer)panel;
+        //controller.mainPanel.centerSplit.setDividerLocation(getWidth() - blindPanel.getWidth());
     }
 }

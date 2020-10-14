@@ -2,6 +2,7 @@ package soup.center;
 
 import soup.center.panels.*;
 import soup.center.panels.Image;
+import soup.display.MainPanel;
 import soup.left.FileNode;
 
 import javax.swing.*;
@@ -18,14 +19,16 @@ public class CenterController extends JTabbedPane implements MouseListener, Mous
 
     public static int CUR_WIDTH,CUR_HEIGHT;
     private int width, height;
-    private static AbstractPanel[] panels = new AbstractPanel[]{new TextFile(null,null,0,0),new CSVFile(null,null,0,0),new Image(null,null,".png",0,0),
+    public MainPanel mainPanel;
+    private static AbstractPanel[] panels = new AbstractPanel[]{new TextFile(null,null,".txt",0,0),new CSVFile(null,null,0,0),new Image(null,null,".png",0,0),
             new Image(null,null, ".jpg",0,0),new LayeredImage(null,null,0,0)};
     private ArrayList<AbstractPanel> openPanels;
-    public CenterController(int width, int height){
+    public CenterController(MainPanel mainPanel, int width, int height){
         this.width = width;
         this.height = height;
         CUR_HEIGHT = height;
         CUR_WIDTH = width;
+        this.mainPanel = mainPanel;
         openPanels = new ArrayList<>();
         setPreferredSize(new Dimension(width,height));
         setMinimumSize(new Dimension(50,50));
@@ -37,7 +40,13 @@ public class CenterController extends JTabbedPane implements MouseListener, Mous
     public void newPanel(String name, AbstractPanel panel){
         openPanels.add(panel);
         add(name, panel);
+        setSelectedComponent(panel);
         setTabComponentAt(getTabCount()-1,new CloseableTab(this,name,panel));
+    }
+
+    @Override
+    public Component add(Component component) {
+        return super.add(component);
     }
 
     public void saveSelectedAs(){
@@ -55,7 +64,7 @@ public class CenterController extends JTabbedPane implements MouseListener, Mous
 
     public void openFileAsText(FileNode node){openFileAsText(node.file);}
     public void openFileAsText(File file){
-        TextFile temp = new TextFile(this, file,width,height);
+        TextFile temp = new TextFile(this, file,".txt",width,height);
         newPanel(file.getName(),temp);
     }
 
