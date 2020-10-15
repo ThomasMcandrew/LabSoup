@@ -7,28 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d422f8dc-8c3b-4bd3-ab78-e0591330cb81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/idw_gpl.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jar/idw-gpl.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lscfg.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/LabSoup/META-INF/LabSoup.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/menubar/MenuBar$6.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/config/Configuration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/config/Settings$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/config/Settings$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/config/Settings.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/soup/utils/config/Configuration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/soup/utils/config/Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/LabSoup_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/LabSoup_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/idw_gpl.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LabSoup.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LabSoup.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/display/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/display/MainFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/menubar/MenuBar$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/menubar/MenuBar$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/menubar/MenuBar$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/menubar/MenuBar$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/menubar/MenuBar$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/menubar/MenuBar$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/menubar/MenuBar$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/menubar/MenuBar$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/menubar/MenuBar$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/menubar/MenuBar$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/menubar/MenuBar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/menubar/MenuBar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/display/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/display/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/menubar/MenuBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/menubar/MenuBar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LabSoup_jar/LabSoup.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/LabSoup_jar/LabSoup.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/META-INF/LabSoup.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/Launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/Launcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/config/Configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/config/Configuration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/config/Settings$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/config/Settings$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/config/Settings$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/config/Settings$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/config/Settings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/config/Settings.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/soup/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/soup/utils/config/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/utils/config/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/soup/utils/config/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/utils/config/Settings.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,11 +54,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/jar/idw-gpl.jar!/" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RunManager">
     <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -119,7 +113,8 @@
       <workItem from="1602174827339" duration="25219000" />
       <workItem from="1602542455280" duration="23346000" />
       <workItem from="1602677095028" duration="2344000" />
-      <workItem from="1602774651632" duration="1981000" />
+      <workItem from="1602774651632" duration="2926000" />
+      <workItem from="1602777961433" duration="2674000" />
     </task>
     <servers />
   </component>
@@ -136,76 +131,85 @@
     </state>
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602641101788" />
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.305.1360.728@0.0.1920.1040" timestamp="1597933062682" />
-    <state x="690" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1598194284243">
+    <state x="690" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1602778929940">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="690" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602778929940" />
     <state x="690" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/1920.305.1360.728@0.0.1920.1040" timestamp="1598194284243" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597720627504">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.305.1360.728@0.0.1920.1040" timestamp="1597720627504" />
+    <state x="690" y="274" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1602779150562">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="274" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602779150562" />
     <state width="424" height="466" key="DebuggerActiveHint" timestamp="1602637103818">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="424" height="466" key="DebuggerActiveHint/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602637103818" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602775736687">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602779022817">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602775736687" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602779022817" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.305.1360.728@0.0.1920.1040" timestamp="1597587251829" />
-    <state width="1877" height="126" key="GridCell.Tab.0.bottom" timestamp="1602777155434">
+    <state width="1877" height="126" key="GridCell.Tab.0.bottom" timestamp="1602781129173">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="126" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602777155434" />
+    <state width="1877" height="126" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602781129172" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.305.1360.728@0.0.1920.1040" timestamp="1598377656969" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598312790064" />
-    <state width="1877" height="126" key="GridCell.Tab.0.center" timestamp="1602777155434">
+    <state width="1877" height="126" key="GridCell.Tab.0.center" timestamp="1602781129172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="126" key="GridCell.Tab.0.center/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602777155434" />
+    <state width="1877" height="126" key="GridCell.Tab.0.center/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602781129172" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.305.1360.728@0.0.1920.1040" timestamp="1598377656969" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598312790064" />
-    <state width="1877" height="126" key="GridCell.Tab.0.left" timestamp="1602777155434">
+    <state width="1877" height="126" key="GridCell.Tab.0.left" timestamp="1602781129172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="126" key="GridCell.Tab.0.left/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602777155434" />
+    <state width="1877" height="126" key="GridCell.Tab.0.left/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602781129172" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.305.1360.728@0.0.1920.1040" timestamp="1598377656969" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598312790064" />
-    <state width="1877" height="126" key="GridCell.Tab.0.right" timestamp="1602777155434">
+    <state width="1877" height="126" key="GridCell.Tab.0.right" timestamp="1602781129172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="126" key="GridCell.Tab.0.right/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602777155434" />
+    <state width="1877" height="126" key="GridCell.Tab.0.right/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602781129172" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.305.1360.728@0.0.1920.1040" timestamp="1598377656969" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598312790064" />
-    <state width="1877" height="324" key="GridCell.Tab.1.bottom" timestamp="1602777018613">
+    <state width="1877" height="324" key="GridCell.Tab.1.bottom" timestamp="1602777935624">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="324" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602777018613" />
+    <state width="1877" height="324" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602777935624" />
     <state width="1877" height="350" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.305.1360.728@0.0.1920.1040" timestamp="1598063922610" />
-    <state width="1877" height="324" key="GridCell.Tab.1.center" timestamp="1602777018613">
+    <state width="1877" height="324" key="GridCell.Tab.1.center" timestamp="1602777935624">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="324" key="GridCell.Tab.1.center/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602777018613" />
+    <state width="1877" height="324" key="GridCell.Tab.1.center/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602777935624" />
     <state width="1877" height="350" key="GridCell.Tab.1.center/0.0.1920.1040/1920.305.1360.728@0.0.1920.1040" timestamp="1598063922609" />
-    <state width="1877" height="324" key="GridCell.Tab.1.left" timestamp="1602777018613">
+    <state width="1877" height="324" key="GridCell.Tab.1.left" timestamp="1602777935624">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="324" key="GridCell.Tab.1.left/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602777018613" />
+    <state width="1877" height="324" key="GridCell.Tab.1.left/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602777935624" />
     <state width="1877" height="350" key="GridCell.Tab.1.left/0.0.1920.1040/1920.305.1360.728@0.0.1920.1040" timestamp="1598063922609" />
-    <state width="1877" height="324" key="GridCell.Tab.1.right" timestamp="1602777018613">
+    <state width="1877" height="324" key="GridCell.Tab.1.right" timestamp="1602777935624">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="324" key="GridCell.Tab.1.right/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602777018613" />
+    <state width="1877" height="324" key="GridCell.Tab.1.right/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602777935624" />
     <state width="1877" height="350" key="GridCell.Tab.1.right/0.0.1920.1040/1920.305.1360.728@0.0.1920.1040" timestamp="1598063922609" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1602775740411">
+    <state x="440" y="94" key="SettingsEditor" timestamp="1602780869922">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602775740411" />
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602780869922" />
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/1920.305.1360.728@0.0.1920.1040" timestamp="1598194295664" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1602345637561">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602345637561" />
+    <state x="764" y="388" key="classpath-attribute-editor" timestamp="1602780521196">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="764" y="388" key="classpath-attribute-editor/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602780521196" />
     <state x="758" y="213" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602470165428">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -277,7 +281,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/soup/utils/config/Configuration.java</url>
-          <line>59</line>
+          <line>53</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>

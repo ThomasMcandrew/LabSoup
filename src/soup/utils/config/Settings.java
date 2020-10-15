@@ -21,14 +21,7 @@ public class Settings extends JFrame {
 
 
     private void initSettings(){
-        ArrayList<String> lnf = new ArrayList<>();
-        for(int i = 0; i < Configuration.LOOK_AND_FEELS.length;i++){
-            lnf.add(Configuration.LOOK_AND_FEELS[i].getDescription());
-        }
-        for(int i = 0; i < Configuration.LOOK_AND_FEELS.length;i++){
-            lnf.add(Configuration.LOOK_AND_FEEL_STRINGS[i]);
-        }
-        JList ui = new JList(lnf.toArray());
+        JList ui = new JList(Configuration.LOOK_AND_FEEL_STRINGS);
         ui.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {

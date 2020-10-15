@@ -1,7 +1,6 @@
 package soup.utils.config;
 
-import net.infonode.gui.laf.InfoNodeLookAndFeel;
-import net.infonode.gui.laf.InfoNodeLookAndFeelThemes;
+
 import soup.display.MainFrame;
 
 import javax.swing.*;
@@ -20,13 +19,7 @@ public class Configuration {
 
     public static int currentLookAndFeel;
 
-    public static LookAndFeel[] LOOK_AND_FEELS = new LookAndFeel[]{
-            new InfoNodeLookAndFeel(InfoNodeLookAndFeelThemes.getGrayTheme()),
-            new InfoNodeLookAndFeel(InfoNodeLookAndFeelThemes.getBlueIceTheme()),
-            new InfoNodeLookAndFeel(InfoNodeLookAndFeelThemes.getSoftGrayTheme()),
-            new InfoNodeLookAndFeel(InfoNodeLookAndFeelThemes.getDarkBlueGreenTheme()),
-            new InfoNodeLookAndFeel(),
-    };
+
     public static String[] LOOK_AND_FEEL_STRINGS = new String[]{"javax.swing.plaf.nimbus.NimbusLookAndFeel",
             "com.sun.java.swing.plaf.motif.MotifLookAndFeel",
             "com.sun.java.swing.plaf.windows.WindowsLookAndFeel",
@@ -71,18 +64,9 @@ public class Configuration {
     }
 
     public static void setNewLookAndFeel(int i){
-        if(i < LOOK_AND_FEELS.length) {
+
             try {
-                UIManager.setLookAndFeel(LOOK_AND_FEELS[i]);
-                currentLookAndFeel = i;
-                SwingUtilities.updateComponentTreeUI(frame);
-                frame.pack();
-            } catch (UnsupportedLookAndFeelException e) {
-                e.printStackTrace();
-            }
-        }else{
-            try {
-                UIManager.setLookAndFeel(LOOK_AND_FEEL_STRINGS[i-LOOK_AND_FEELS.length]);
+                UIManager.setLookAndFeel(LOOK_AND_FEEL_STRINGS[i]);
                 currentLookAndFeel = i;
                 SwingUtilities.updateComponentTreeUI(frame);
                 frame.pack();
@@ -98,4 +82,4 @@ public class Configuration {
         }
     }
 
-}
+
