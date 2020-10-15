@@ -1,6 +1,7 @@
 package soup.display;
 
 import soup.menubar.MenuBar;
+import soup.utils.config.Configuration;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,6 +13,8 @@ public class MainFrame extends JFrame {
     private int width, height;
     public MainFrame(){
         super("LabSoup");
+        Configuration.frame = this;
+        Configuration.load();
         width = 800;
         height = 600;
         initBefore();

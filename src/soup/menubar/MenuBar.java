@@ -5,6 +5,7 @@ import soup.center.panels.CSVFile;
 import soup.center.panels.LayeredImage;
 import soup.center.panels.TextFile;
 import soup.display.MainFrame;
+import soup.utils.config.Settings;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -12,14 +13,27 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
 public class MenuBar extends JMenuBar {
-    private JMenu file;
+    private JMenu file,view;
     private MainFrame mainFrame;
     public MenuBar(MainFrame mainFrame){
         super();
         this.mainFrame = mainFrame;
         fileInit();
+        viewInit();
     }
 
+    private void viewInit(){
+        view = new JMenu("View");
+        JMenuItem settings = new JMenuItem("Settings");
+        settings.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Settings();
+            }
+        });
+        view.add(settings);
+        add(view);
+    }
 
 
     private void fileInit(){
