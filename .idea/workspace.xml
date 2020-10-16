@@ -7,22 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d422f8dc-8c3b-4bd3-ab78-e0591330cb81" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/LabSoup_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/LabSoup_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/idw_gpl.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LabSoup.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LabSoup.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/LabSoup_jar/LabSoup.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/LabSoup_jar/LabSoup.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/META-INF/LabSoup.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/Launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/Launcher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/config/Configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/config/Configuration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/config/Settings$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/config/Settings$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/config/Settings$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/config/Settings$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/config/Settings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabSoup/soup/utils/config/Settings.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/utils/config/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/utils/config/Configuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/soup/utils/config/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/utils/config/Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/soup/right/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/soup/right/FileController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +40,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/jar/idw-gpl.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -114,7 +101,8 @@
       <workItem from="1602542455280" duration="23346000" />
       <workItem from="1602677095028" duration="2344000" />
       <workItem from="1602774651632" duration="2926000" />
-      <workItem from="1602777961433" duration="2674000" />
+      <workItem from="1602777961433" duration="4522000" />
+      <workItem from="1602872483138" duration="259000" />
     </task>
     <servers />
   </component>
@@ -153,28 +141,28 @@
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602779022817" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.305.1360.728@0.0.1920.1040" timestamp="1597587251829" />
-    <state width="1877" height="126" key="GridCell.Tab.0.bottom" timestamp="1602781129173">
+    <state width="1877" height="126" key="GridCell.Tab.0.bottom" timestamp="1602872868049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="126" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602781129172" />
+    <state width="1877" height="126" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602872868049" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.305.1360.728@0.0.1920.1040" timestamp="1598377656969" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598312790064" />
-    <state width="1877" height="126" key="GridCell.Tab.0.center" timestamp="1602781129172">
+    <state width="1877" height="126" key="GridCell.Tab.0.center" timestamp="1602872868049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="126" key="GridCell.Tab.0.center/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602781129172" />
+    <state width="1877" height="126" key="GridCell.Tab.0.center/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602872868049" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.305.1360.728@0.0.1920.1040" timestamp="1598377656969" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598312790064" />
-    <state width="1877" height="126" key="GridCell.Tab.0.left" timestamp="1602781129172">
+    <state width="1877" height="126" key="GridCell.Tab.0.left" timestamp="1602872868049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="126" key="GridCell.Tab.0.left/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602781129172" />
+    <state width="1877" height="126" key="GridCell.Tab.0.left/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602872868049" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.305.1360.728@0.0.1920.1040" timestamp="1598377656969" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598312790064" />
-    <state width="1877" height="126" key="GridCell.Tab.0.right" timestamp="1602781129172">
+    <state width="1877" height="126" key="GridCell.Tab.0.right" timestamp="1602872868049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="126" key="GridCell.Tab.0.right/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602781129172" />
+    <state width="1877" height="126" key="GridCell.Tab.0.right/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602872868049" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.305.1360.728@0.0.1920.1040" timestamp="1598377656969" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598312790064" />
     <state width="1877" height="324" key="GridCell.Tab.1.bottom" timestamp="1602777935624">
@@ -223,9 +211,10 @@
       <screen x="-1360" y="304" width="1360" height="728" />
     </state>
     <state x="-1360" y="307" width="1376" height="815" key="dock-window-2/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1600575162604" />
-    <state x="342" y="140" key="new project wizard" timestamp="1598374829745">
+    <state x="342" y="140" key="new project wizard" timestamp="1602801789594">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="342" y="140" key="new project wizard/0.0.1920.1040/-1360.304.1360.728@0.0.1920.1040" timestamp="1602801789594" />
     <state x="342" y="140" key="new project wizard/0.0.1920.1040/1920.305.1360.728@0.0.1920.1040" timestamp="1598374829745" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1602636587044">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -281,7 +270,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/soup/utils/config/Configuration.java</url>
-          <line>53</line>
+          <line>52</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>

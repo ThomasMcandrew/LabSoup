@@ -28,7 +28,8 @@ public class FileController extends AbstractController {
 
         JLabel blind = new JLabel("Blind Files");
         JLabel split = new JLabel("Split folder by substring. use ',' to separate values");
-        JTextField folders = new JTextField(24);
+        JTextField folders = new JTextField();
+        folders.setPreferredSize(new Dimension(200,20));
         JButton run = new JButton("Run");
         JLabel onlyUseThese = new JLabel("Only use these substrings");
         JCheckBox onlyUseTheseCheck = new JCheckBox();
@@ -41,10 +42,13 @@ public class FileController extends AbstractController {
         });
         JLabel useOther = new JLabel("Save to other File format");
         JCheckBox useOtherFileFormat = new JCheckBox();
-        JTextField fileFormat = new JTextField(9);
+        JTextField fileFormat = new JTextField();
+        fileFormat.setPreferredSize(new Dimension(90,20));
+
         JCheckBox onlyBlindCheck = new JCheckBox();
         JLabel onlyBlindLabel = new JLabel("Only blind file-type");
-        JTextField onlyBlindText = new JTextField(9);
+        JTextField onlyBlindText = new JTextField();
+        onlyBlindText.setPreferredSize(new Dimension(90,20));
         onlyBlindText.addKeyListener(new KeyAdapter() {
             @Override
             public void keyTyped(KeyEvent e) {
