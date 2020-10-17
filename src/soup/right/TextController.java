@@ -20,8 +20,6 @@ public class TextController extends AbstractController {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.setColor(Color.GREEN);
-        g.fillRect(20,20,20,20);
 
     }
 
@@ -31,6 +29,7 @@ public class TextController extends AbstractController {
         playType.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                textPanel.saveFile();
                 TypeRace temp = new TypeRace(controller,textPanel.file,0,0);
                 controller.newPanel("Type Race: " + textPanel.file.getName(),temp);
                 controller.setSelectedComponent(temp);
