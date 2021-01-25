@@ -29,7 +29,7 @@ public class FileController extends AbstractController {
         JLabel blind = new JLabel("Blind Files");
         JLabel split = new JLabel("Split folder by substring. use ',' to separate values");
         JTextField folders = new JTextField();
-        folders.setPreferredSize(new Dimension(200,20));
+        folders.setPreferredSize(new Dimension(200,30));
         JButton run = new JButton("Run");
         JLabel onlyUseThese = new JLabel("Only use these substrings");
         JCheckBox onlyUseTheseCheck = new JCheckBox();
@@ -43,12 +43,12 @@ public class FileController extends AbstractController {
         JLabel useOther = new JLabel("Save to other File format");
         JCheckBox useOtherFileFormat = new JCheckBox();
         JTextField fileFormat = new JTextField();
-        fileFormat.setPreferredSize(new Dimension(90,20));
+        fileFormat.setPreferredSize(new Dimension(90,30));
 
         JCheckBox onlyBlindCheck = new JCheckBox();
         JLabel onlyBlindLabel = new JLabel("Only blind file-type");
         JTextField onlyBlindText = new JTextField();
-        onlyBlindText.setPreferredSize(new Dimension(90,20));
+        onlyBlindText.setPreferredSize(new Dimension(90,30));
         onlyBlindText.addKeyListener(new KeyAdapter() {
             @Override
             public void keyTyped(KeyEvent e) {
@@ -90,7 +90,7 @@ public class FileController extends AbstractController {
             }
         });
 
-        blindPanel.setPreferredSize(new Dimension(280,150));
+        //blindPanel.setPreferredSize(new Dimension(280,150));
         blindPanel.setBorder(BorderFactory.createTitledBorder("BlindFiles"));
         blindPanel.setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
