@@ -23,6 +23,7 @@ public class RightPanel extends JPanel {
     private ImageController IMAGE;
     private GifController GIF;
     private TypeRaceController RACE;
+    private ReportController REPORT;
     private String NullPanel = "NULL";
     private String CSVString = "CSV";
     private String TextString = "TEXT";
@@ -30,6 +31,7 @@ public class RightPanel extends JPanel {
     private String ImageString = "IMAGE";
     private String GifString = "GIF";
     private String RaceString = "RACE";
+    private String ReportString = "REPORT";
     public RightPanel(CenterController controller, int width, int height){
         this.controller = controller;
         thisPanel = this;
@@ -57,6 +59,7 @@ public class RightPanel extends JPanel {
         IMAGE = new ImageController(controller);
         GIF = new GifController(controller);
         RACE = new TypeRaceController(controller);
+        REPORT = new ReportController(controller);
         add(nullPanel, NullPanel);
         add(CSV,CSVString);
         add(TEXT,TextString);
@@ -64,6 +67,7 @@ public class RightPanel extends JPanel {
         add(IMAGE,ImageString);
         add(GIF,GifString);
         add(RACE,RaceString);
+        add(REPORT,ReportString);
         controller.addChangeListener(new ChangeListener() {
             @Override
             public void stateChanged(ChangeEvent e) {
@@ -95,6 +99,10 @@ public class RightPanel extends JPanel {
                     case "race":
                         layout.show(thisPanel,RaceString);
                         RACE.setPanel(current);
+                        break;
+                    case ".lsr":
+                        layout.show(thisPanel,ReportString);
+                        REPORT.setPanel(current);
                         break;
                     default:
                         layout.show(thisPanel,NullPanel);

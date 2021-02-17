@@ -1,9 +1,6 @@
 package soup.menubar;
 
-import soup.center.panels.AbstractPanel;
-import soup.center.panels.CSVFile;
-import soup.center.panels.LayeredImage;
-import soup.center.panels.TextFile;
+import soup.center.panels.*;
 import soup.display.MainFrame;
 import soup.utils.config.Settings;
 
@@ -60,9 +57,17 @@ public class MenuBar extends JMenuBar {
                 mainFrame.mainPanel.centerController.newPanel("new",new LayeredImage(mainFrame.mainPanel.centerController,null,0,0));
             }
         });
+        JMenuItem newReport = new JMenuItem("Report");
+        newReport.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mainFrame.mainPanel.centerController.newPanel("new",new Report(mainFrame.mainPanel.centerController,null,0,0));
+            }
+        });
         createNewFile.add(newText);
         createNewFile.add(newCsv);
         createNewFile.add(newGif);
+        createNewFile.add(newReport);
         file.add(createNewFile);
 
         JMenuItem saveAs = new JMenuItem("Save As");

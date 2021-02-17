@@ -41,8 +41,6 @@ public class GifUtils {
         graphicsControlExtensionNode.setAttribute("delayTime", Integer.toString(delay));
         graphicsControlExtensionNode.setAttribute("transparentColorIndex", "0");
 
-//        IIOMetadataNode commentsNode = getNode(root, "CommentExtensions");
-//        commentsNode.setAttribute("CommentExtension", "from ISU AEROSPACE DEPT");
 
         IIOMetadataNode appExtensionsNode = getNode(root, "ApplicationExtensions");
         IIOMetadataNode child = new IIOMetadataNode("ApplicationExtension");
