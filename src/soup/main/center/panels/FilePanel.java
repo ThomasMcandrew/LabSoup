@@ -13,14 +13,24 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.File;
 import java.util.Arrays;
+import java.util.List;
 
 public class FilePanel extends AbstractPanel {
     private File lastSelected;
-
+    private WebFileTable webFileTable;
     public FilePanel(File file) {
         super(file, "\\", Icons.folder);
     }
 
+
+    public File[] getSelectedFiles(){
+        List<File> files = webFileTable.getSelectedFiles();
+        File[] file = new File[files.size()];
+        for(int i = 0; i < files.size(); i++){
+            file[i] = files.get(i);
+        }
+        return file;
+    }
     @Override
     public AbstractPanel newPanel(File file) {
         return new FilePanel(file);
@@ -33,7 +43,7 @@ public class FilePanel extends AbstractPanel {
 
     @Override
     public void loadFile(File file) {
-        WebFileTable webFileTable = new WebFileTable();
+        webFileTable = new WebFileTable();
         webFileTable.addFiles(Arrays.asList(file.listFiles()));
         webFileTable.setStyleId(StyleId.filetable);
         webFileTable.addMouseListener(new MouseAdapter() {
@@ -47,6 +57,7 @@ public class FilePanel extends AbstractPanel {
         });
 
         WebScrollPane scroller = new WebScrollPane(webFileTable);
+        scroller.setStyleId(StyleId.scrollpaneTransparentHovering);
         add(scroller);
     }
 }

@@ -7,6 +7,7 @@ import com.alee.managers.notification.NotificationManager;
 import com.alee.managers.notification.NotificationOption;
 import com.alee.managers.notification.WebInnerNotification;
 import com.alee.managers.style.StyleId;
+import com.alee.utils.swing.ColorUIResource;
 import com.alee.utils.swing.Customizer;
 import soup.main.center.panels.*;
 import soup.utils.FileUtils;

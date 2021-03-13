@@ -2,31 +2,38 @@ package soup.main.editor.editors;
 
 import com.alee.laf.button.WebButton;
 import com.alee.laf.checkbox.WebCheckBox;
+import com.alee.laf.combobox.WebComboBox;
 import com.alee.laf.label.WebLabel;
 import com.alee.laf.panel.WebPanel;
+import com.alee.laf.scroll.WebScrollPane;
 import com.alee.laf.text.WebTextField;
+import com.alee.managers.style.StyleId;
 import soup.main.center.CenterController;
 import soup.main.center.panels.FilePanel;
 import soup.main.editor.AbstractEditor;
 import soup.utils.files.BlindUtils;
+import soup.utils.files.FileSwapUtils;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class FileEditor extends AbstractEditor {
-    //private FilePanel panel;
     private WebPanel blindPanel;
     public FileEditor() {
         super();
     }
 
 
-    private void initBlind(){
+    private WebPanel initBlind(){
         blindPanel = new WebPanel();
 
         WebLabel blind = new WebLabel("Blind Files");
@@ -88,15 +95,10 @@ public class FileEditor extends AbstractEditor {
                     }
                 }
                 BlindUtils.BlindFiles(((FilePanel) (CenterController.getCenterController().getSelectedDocument().getComponent())).file,folders.getText(),ext,inExt,onlyUseTheseCheck.isSelected());
-                //BlindUtils.BlindFolder(controller, panel.file, folders.getText(), ext);
-
             }
         });
 
-        blindPanel.setPreferredSize(new Dimension(280,150));
-        blindPanel.setMinimumSize(new Dimension(280,150));
-        blindPanel.setMaximumSize(new Dimension(280,150));
-        blindPanel.setSize(new Dimension(280,150));
+
 
         blindPanel.setBorder(BorderFactory.createTitledBorder("BlindFiles"));
         blindPanel.setLayout(new GridBagLayout());
@@ -134,13 +136,73 @@ public class FileEditor extends AbstractEditor {
         c.gridwidth = 3;
         c.anchor = GridBagConstraints.CENTER;
         blindPanel.add(run,c);
-        add(blindPanel);
+        return blindPanel;
 
     }
+    private WebPanel initChangeImageFileType(){
+        WebPanel imageSwap = new WebPanel();
+        imageSwap.setBorder(BorderFactory.createTitledBorder("Image type swap"));
+        String[] types = ImageIO.getReaderFileSuffixes();
+        String[] typeWithAll = new String[types.length + 1];
+        for(int i = 0; i < types.length; i++){
+            typeWithAll[i+1] = types[i];
+        }
+        typeWithAll[0] = "ALL";
+        WebCheckBox onlySelected = new WebCheckBox("Only Selected");
+        WebCheckBox duplicate = new WebCheckBox("Save as copy");
+        duplicate.setSelected(true);
+        duplicate.setEnabled(false);
+        WebComboBox old = new WebComboBox(typeWithAll);
+        WebLabel arrow = new WebLabel("---->");
+        WebComboBox newfile = new WebComboBox(types);
+        WebButton go = new WebButton(" Run ");
+        go.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(onlySelected.isSelected()){
+                    File panelsFile = ((FilePanel) (CenterController.getCenterController().getSelectedDocument().getComponent())).file;
+                    FileSwapUtils.swapImageFilesAsync(panelsFile,((FilePanel) (CenterController.getCenterController().getSelectedDocument().getComponent())).getSelectedFiles(), old.getSelectedItem().toString(), newfile.getSelectedItem().toString(),duplicate.isSelected());
+                }else {
+                    File panelsFile = ((FilePanel) (CenterController.getCenterController().getSelectedDocument().getComponent())).file;
+                    FileSwapUtils.swapImageFilesAsync(panelsFile,panelsFile.listFiles(), old.getSelectedItem().toString(), newfile.getSelectedItem().toString(),duplicate.isSelected());
 
+                }
+            }
+        });
+        GridBagConstraints c = new GridBagConstraints();
+        imageSwap.setLayout(new GridBagLayout());
+        c.gridy = 0;
+        c.gridx = 0;
+        imageSwap.add(onlySelected,c);
+        c.gridx++;
+        imageSwap.add(old, c);
+        c.gridx++;
+        imageSwap.add(arrow, c);
+        c.gridx++;
+        imageSwap.add(newfile, c);
+
+        c.gridx = 0;
+        c.gridy++;
+        imageSwap.add(duplicate,c);
+        c.gridx++;
+        c.gridx++;
+        c.gridx++;
+        imageSwap.add(go,c);
+        return imageSwap;
+    }
     @Override
     protected void init() {
-        initBlind();
+        WebPanel panel = new WebPanel();
+        GridBagConstraints c = new GridBagConstraints();
+        panel.setLayout(new GridBagLayout());
+        c.gridy = 0;
+        c.gridx = 0;
+        panel.add(initBlind(),c);
+        c.gridy++;
+        panel.add(initChangeImageFileType(),c);
+        WebScrollPane scrollPane = new WebScrollPane(panel);
+        scrollPane.setStyleId(StyleId.scrollpaneHovering);
+        add(scrollPane);
     }
 
 

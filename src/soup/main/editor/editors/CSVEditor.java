@@ -1,5 +1,7 @@
 package soup.main.editor.editors;
 
+import com.alee.extended.accordion.AccordionPane;
+import com.alee.extended.accordion.WebAccordion;
 import com.alee.laf.button.WebButton;
 import com.alee.laf.combobox.WebComboBox;
 import com.alee.laf.grouping.GroupPane;
@@ -10,7 +12,9 @@ import com.alee.managers.style.StyleId;
 import soup.main.center.CenterController;
 import soup.main.center.panels.CSVPanel;
 import soup.main.editor.AbstractEditor;
+import soup.utils.FileUtils;
 import soup.utils.csv.CSVMathUtils;
+import soup.utils.csv.Summary;
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,18 +30,39 @@ public class CSVEditor extends AbstractEditor {
 
     @Override
     protected void init() {
-        add(initMathPanel());
+//        WebAccordion accordion = new WebAccordion();
+//        accordion.add(initSummaryPanel(),0);
+//        accordion.add(initMathPanel(),1);
+        setLayout(new GridBagLayout());
+        GridBagConstraints c = new GridBagConstraints();
+        c.gridy = 0;
+        c.gridx = 0;
+        add(initSummaryPanel(),c);
+        c.gridy++;
+        add(initMathPanel(),c);
+
     }
-    private void initSummaryPanel(){
+    private WebPanel initSummaryPanel(){
         WebPanel summary = new WebPanel();
         summary.setLayout(new GridBagLayout());
         summary.setPreferredSize(new Dimension(400,400));
         GridBagConstraints c = new GridBagConstraints();
-        WebLabel summ = new WebLabel("Summary");
-
+        WebButton summaryToNew = new WebButton("ExportSummary");
+        summaryToNew.setEnabled(false);
+        summaryToNew.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Summary.createSummary(((CSVPanel)(CenterController.getCenterController().getSelectedDocument().getComponent())).file, FileUtils.getFreeFileName());
+            }
+        });
+        c.gridy = 0;
+        c.gridx = 0;
+        summary.add(summaryToNew,c);
+        return summary;
     }
     private WebPanel initMathPanel(){
         WebPanel math = new WebPanel();
+        //AccordionPane math = new AccordionPane();
         math.setLayout(new GridBagLayout());
         math.setPreferredSize(400,400);
         GridBagConstraints c = new GridBagConstraints();

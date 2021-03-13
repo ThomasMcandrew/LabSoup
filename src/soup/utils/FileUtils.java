@@ -16,6 +16,7 @@ import java.util.UUID;
 public class FileUtils {
     private static File tempFolder = new File(System.getProperty("user.home") + File.separator + ".lsoup" + File.separator + "temp_files");
     private static File labSoupFolder = new File(System.getProperty("user.home") + File.separator + ".lsoup");
+    private static File summaryFolder = new File(System.getProperty("user.home") + File.separator + ".lsoup" + File.separator + "summary_files");
     public static File getTempFolder(){
         if(!tempFolder.exists() || !tempFolder.isDirectory()){
             tempFolder.mkdir();
@@ -27,6 +28,12 @@ public class FileUtils {
             labSoupFolder.mkdir();
         }
         return labSoupFolder;
+    }
+    public static File getSummaryFolder(){
+        if(!summaryFolder.exists() || !summaryFolder.isDirectory()){
+            summaryFolder.mkdir();
+        }
+        return summaryFolder;
     }
     public static File[] getTempFiles(){
         return getTempFolder().listFiles();

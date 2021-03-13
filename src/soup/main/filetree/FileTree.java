@@ -42,6 +42,11 @@ public class FileTree extends WebFileTree implements MouseListener {
         setFileFilter(filter);
         addMouseListener(this);
     }
+    public void swapFile(File file){
+        getRootNode().setFile(file);
+        setFileFilter(filter);
+        reloadRootNode();
+    }
     public void toggleHiddenFiles(){
         if(getFileFilter() == null){
             setFileFilter(on);

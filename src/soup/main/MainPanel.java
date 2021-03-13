@@ -36,27 +36,28 @@ public class MainPanel extends WebPanel {
         return fileTree;
     }
     private static WebScrollPane webScrollPane;
-    private static WebMultiSplitPane splitPane;
-    private static MultiSplitPaneSettings multiSplitPaneSettings;
-    private int fileExplorerDividerLocation;
-    private int EditorDividerLocation;
+    private static WebSplitPane webSplitPane;
+    private static WebPanel leftPanelController;
+    private static String fileTreeString = "TREE";
+    private static String editorString = "Editor";
+    private static String currentPanel = fileTreeString;
+    private static CardLayout layout;
     public static void setNewFileTree(String file){
-        fileTree = new FileTree(file);
-        webScrollPane = new WebScrollPane(fileTree);
-        splitPane.remove(0);
-        splitPane.add(webScrollPane,0);
+        fileTree.swapFile(new File(file));
     }
     private MainPanel(){
         setStyleId(StyleId.panelTransparent);
-        splitPane = new WebMultiSplitPane(StyleId.splitpaneTransparent);
+        webSplitPane = new WebSplitPane(StyleId.splitpane);
 
-        splitPane.setOneTouchExpandable(true);
+        leftPanelController = new WebPanel();
+        layout = new CardLayout();
+        leftPanelController.setLayout(layout);
         fileTree = loadFileTree();
         if(fileTree == null) {
             fileTree = new FileTree();
         }
         webScrollPane = new WebScrollPane(fileTree);
-        webScrollPane.setStyleId(StyleId.scrollpaneHovering);
+        webScrollPane.setStyleId(StyleId.scrollpaneTransparentHovering);
         webScrollPane.setPreferredWidth(200);
         WebLabel fileExplorer = new WebLabel("FileExplorer   ");
         fileExplorer.setStyleId(StyleId.labelVerticalCCW);
@@ -64,33 +65,68 @@ public class MainPanel extends WebPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                if(splitPane.getDividers().get(0).getLocation().x > 0){
-                    //splitPane.getViewComponent(0).setEnabled(false);
-
-                    //splitPane.getDividers().get(0).setLocation(0,0);
-                }else{
-                    //splitPane.getDividers().get(0).setLocation(200,0);
+                if(currentPanel == fileTreeString && webSplitPane.getDividerLocation() != 0){
+                    webSplitPane.setDividerLocation(0);
+                }else if(currentPanel == fileTreeString && webSplitPane.getDividerLocation() == 0){
+                    webSplitPane.setDividerLocation(230);
+                }else if(currentPanel != fileTreeString){
+                    layout.show(leftPanelController,fileTreeString);
+                    currentPanel = fileTreeString;
+                    if(webSplitPane.getDividerLocation() == 0){
+                        webSplitPane.setDividerLocation(230);
+                    }
+                }
+            }
+        });
+        WebLabel editorLabel = new WebLabel("Editor    ");
+        //editorLabel.setBorder(BorderFactory.createLineBorder(Color.darkGray));
+        editorLabel.setStyleId(StyleId.labelVerticalCCW);
+        editorLabel.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                if(currentPanel == editorString && webSplitPane.getDividerLocation() != 0){
+                    webSplitPane.setDividerLocation(0);
+                }else if(currentPanel == editorString && webSplitPane.getDividerLocation() == 0){
+                    webSplitPane.setDividerLocation(300);
+                }else if(currentPanel != editorString){
+                    layout.show(leftPanelController,editorString);
+                    currentPanel = editorString;
+                    if(webSplitPane.getDividerLocation() < 280){
+                        webSplitPane.setDividerLocation(280);
+                    }
                 }
             }
         });
 
-        splitPane.add(webScrollPane,0);
-        splitPane.setDividerSize(1);
         CenterController centerController = CenterController.getCenterController();
-        splitPane.add(centerController,1);
 
         EditorController editorController = new EditorController();
-        splitPane.add(editorController,2);
 
         WebPanel webPanel = new WebPanel();
-        webPanel.add(fileExplorer,BorderLayout.NORTH);
-        add(webPanel,BorderLayout.WEST);
+        GridBagConstraints c = new GridBagConstraints();
+        webPanel.setLayout(new GridBagLayout());
+        c.gridx = 0;
+        c.gridy = 0;
+        c.anchor = GridBagConstraints.NORTH;
+        webPanel.add(fileExplorer,c);
+        c.gridy++;
+        webPanel.add(editorLabel,c);
+        WebPanel another = new WebPanel();
+        another.add(webPanel,BorderLayout.NORTH);
+        add(another,BorderLayout.WEST);
 
-
-        multiSplitPaneSettings = new MultiSplitPaneSettings();
-
-        splitPane.setMultiSplitState(multiSplitPaneSettings);
-        add(splitPane,BorderLayout.CENTER);
+        leftPanelController.add(editorController,editorString);
+        leftPanelController.add(webScrollPane,fileTreeString);
+        layout.show(leftPanelController,fileTreeString);
+        webSplitPane.setLeftComponent(leftPanelController);
+        webSplitPane.setRightComponent(centerController);
+        webSplitPane.setEnabled(true);
+        leftPanelController.setMinimumSize(0,getHeight());
+        centerController.setMinimumSize((int) (webSplitPane.getWidth()*.8), getHeight());
+        webSplitPane.setDividerLocation(230);
+        webSplitPane.setStyleId(StyleId.splitpaneUndecorated);
+        add(webSplitPane,BorderLayout.CENTER);
 
     }
     public void saveFileTree(){

@@ -70,7 +70,7 @@ public class TextPanel extends AbstractPanel{
                 }
             });
             scroller = new WebScrollPane(textArea);
-            scroller.setStyleId(StyleId.scrollpaneUndecorated);
+            scroller.setStyleId(StyleId.scrollpaneTransparentHovering);
             add(scroller);
         }
 
