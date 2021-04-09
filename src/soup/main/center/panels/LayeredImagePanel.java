@@ -12,19 +12,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class LayeredImagePanel extends AbstractPanel {
-    private WebTabbedPane tabbs;
     private ArrayList<BufferedImage> images;
     private int delay;
 
     public LayeredImagePanel(File file) {
         super(file, ".gif", Icons.globe);
-        if(tabbs == null) {
-            tabbs = new WebTabbedPane();
-        }
-        if(images == null) {
-            images = new ArrayList<>();
-        }
-        add(tabbs);
     }
 
     @Override
@@ -37,14 +29,17 @@ public class LayeredImagePanel extends AbstractPanel {
     }
 
     public void addImage(BufferedImage b){
-        tabbs.add(new ImageView(b));
         images.add(b);
     }
     public void addImage(BufferedImage[] b){
         for(int i = 0; i < b.length; i++) {
-            tabbs.add(new ImageView(b[i]));
             images.add(b[i]);
         }
+    }
+
+    private void init(){
+        images = new ArrayList<>();
+
     }
 
     @Override
@@ -69,16 +64,10 @@ public class LayeredImagePanel extends AbstractPanel {
     public void loadFile(File file)  {
         if(file == null)
             return;
-        if(tabbs == null) {
-            tabbs = new WebTabbedPane();
-        }
-        if(images == null) {
-            images = new ArrayList<>();
-        }
+
         try {
             BufferedImage[] im = GifUtils.readGif(file);
             for(int i = 0; i < im.length; i++){
-                tabbs.add(new ImageView(im[i]));
                 images.add(im[i]);
             }
         } catch (IOException e) {

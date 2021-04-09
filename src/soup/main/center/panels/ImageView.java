@@ -1,12 +1,12 @@
 package soup.main.center.panels;
 
+import com.alee.laf.button.WebButton;
 import com.alee.laf.panel.WebPanel;
+import com.alee.managers.icon.Icons;
+import com.alee.managers.style.StyleId;
 
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseWheelEvent;
-import java.awt.event.MouseWheelListener;
+import java.awt.event.*;
 import java.awt.image.BufferedImage;
 
 public class ImageView extends WebPanel implements MouseListener, MouseWheelListener {
@@ -14,40 +14,67 @@ public class ImageView extends WebPanel implements MouseListener, MouseWheelList
     private BufferedImage image;
     private double scale;
     private int xOffset, yOffset;
-    public ImageView(BufferedImage image){
+    private ImagePanel panel;
+    public ImageView(BufferedImage image,ImagePanel panel){
         this.image = image;
+        this.panel = panel;
         addMouseListener(this);
         addMouseWheelListener(this);
         scale = 1;
         xOffset=0;
         yOffset=0;
+        WebButton right = new WebButton(Icons.right);
+        right.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                panel.moveRight();
+                repaint();
+            }
+        });
+        right.setStyleId(StyleId.buttonIconHover);
+        WebButton left = new WebButton(Icons.left);
+        left.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                panel.moveLeft();
+                repaint();
+            }
+        });
+        left.setStyleId(StyleId.buttonIconHover);
+
+        add(left,BorderLayout.WEST);
+        add(right,BorderLayout.EAST);
     }
 
-
+    public void setImage(BufferedImage im){
+        image = im;
+        repaint();
+    }
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        int width=getWidth(),height=getHeight();
         int imageWidth = image.getWidth(), imageHeight = image.getHeight();
 
-        if(image.getHeight() > getHeight()){
-            imageHeight = getHeight();
-            imageWidth = (int)(image.getWidth() * ((double) getHeight() / (double) image.getHeight()));
+        if(image.getHeight() > height){
+            imageHeight = height;
+            imageWidth = (int)(image.getWidth() * ((double) height / (double) image.getHeight()));
         }
-        if(imageWidth > getWidth()){
-            imageHeight = (int)(imageHeight * ((double) getWidth() / (double) imageWidth));
-            imageWidth = getWidth();
+        if(imageWidth > width){
+            imageHeight = (int)(imageHeight * ((double) width / (double) imageWidth));
+            imageWidth = width;
         }
-        if(imageWidth * scale < getWidth()){
-            xOffset = (int) (getWidth() - (imageWidth * scale)) / 2;
+        if(imageWidth * scale < width){
+            xOffset = (int) (width - (imageWidth * scale)) / 2;
         }
-        if(imageHeight * scale < getHeight()){
-            yOffset = (int) (getHeight() - (imageHeight * scale)) / 2;
+        if(imageHeight * scale < height){
+            yOffset = (int) (height - (imageHeight * scale)) / 2;
         }
-        if(imageWidth * scale > getWidth()){
-            xOffset = (int) ((imageWidth * scale) - getWidth()) / -2;
+        if(imageWidth * scale > width){
+            xOffset = (int) ((imageWidth * scale) - width) / -2;
         }
-        if(imageHeight * scale > getHeight()){
-            yOffset = (int) ((imageHeight * scale) - getHeight()) / -2;
+        if(imageHeight * scale > height){
+            yOffset = (int) ((imageHeight * scale) - height) / -2;
         }
         g.drawImage(image,xOffset,yOffset,(int) (imageWidth * scale),(int) (imageHeight * scale),null);
 

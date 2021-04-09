@@ -126,7 +126,9 @@ public class CenterController extends WebDocumentPane {
                 e.printStackTrace();
             }
         }
-        openDocument(new DocumentData(panel.file.getAbsolutePath(), panel.icon, panel.file.getName(), Color.white/*maybe cool to color specify*/, panel));
+        DocumentData documentData = new DocumentData(panel.file.getAbsolutePath(), panel.icon, panel.file.getName(), Color.white/*maybe cool to color specify*/, panel);
+        panel.setDocumentData(documentData);
+        openDocument(documentData);
     }
     public void openFile(File file){
         if(file.isDirectory()){
