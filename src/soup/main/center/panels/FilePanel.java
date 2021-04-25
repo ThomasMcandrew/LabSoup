@@ -1,6 +1,7 @@
 package soup.main.center.panels;
 
 import com.alee.extended.filechooser.WebFileTable;
+import com.alee.graphics.filters.ImageMath;
 import com.alee.laf.list.WebList;
 import com.alee.laf.scroll.WebScrollPane;
 import com.alee.managers.icon.Icons;
@@ -30,6 +31,7 @@ public class FilePanel extends AbstractPanel {
             file[i] = files.get(i);
         }
         return file;
+
     }
     @Override
     public AbstractPanel newPanel(File file) {

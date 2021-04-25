@@ -17,6 +17,7 @@ public class FileUtils {
     private static File tempFolder = new File(System.getProperty("user.home") + File.separator + ".lsoup" + File.separator + "temp_files");
     private static File labSoupFolder = new File(System.getProperty("user.home") + File.separator + ".lsoup");
     private static File summaryFolder = new File(System.getProperty("user.home") + File.separator + ".lsoup" + File.separator + "summary_files");
+    private static File speedReadFolder = new File(System.getProperty("user.home") + File.separator + ".lsoup" + File.separator + "sr_files");
     public static File getTempFolder(){
         if(!tempFolder.exists() || !tempFolder.isDirectory()){
             tempFolder.mkdir();
@@ -28,6 +29,12 @@ public class FileUtils {
             labSoupFolder.mkdir();
         }
         return labSoupFolder;
+    }
+    public static File getSpeedReadFolder(){
+        if(!speedReadFolder.exists() || ! speedReadFolder.isDirectory()){
+            speedReadFolder.mkdir();
+        }
+        return speedReadFolder;
     }
     public static File getSummaryFolder(){
         if(!summaryFolder.exists() || !summaryFolder.isDirectory()){
@@ -41,7 +48,7 @@ public class FileUtils {
     public static String getFreeFileName(){
         return "new (" + UUID.randomUUID() + ")";
     }
-    public static BufferedImage[] openImage(){
+    public static BufferedImage[] openImages(){
         final JFileChooser fc = new JFileChooser();
         fc.setMultiSelectionEnabled(true);
         fc.addChoosableFileFilter(new FileNameExtensionFilter("Image files", ImageIO.getReaderFileSuffixes()));
@@ -53,6 +60,21 @@ public class FileUtils {
             for(int i = 0; i < files.length;i++){
                 b[i] = ImageIO.read(files[i]);
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return b;
+    }
+    public static BufferedImage openImage(){
+        final JFileChooser fc = new JFileChooser();
+        fc.setMultiSelectionEnabled(true);
+        fc.addChoosableFileFilter(new FileNameExtensionFilter("Image files", ImageIO.getReaderFileSuffixes()));
+        fc.setAcceptAllFileFilterUsed(false);
+        int returnVal = fc.showOpenDialog(null);
+        File file = fc.getSelectedFile();
+        BufferedImage b = null;
+        try {
+            b = ImageIO.read(file);
         } catch (IOException e) {
             e.printStackTrace();
         }

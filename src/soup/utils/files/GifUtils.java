@@ -10,6 +10,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class GifUtils {
     public static BufferedImage[] readGif(File file) throws IOException {
@@ -23,6 +24,24 @@ public class GifUtils {
         }
 
         return images;
+    }
+    public static ArrayList<BufferedImage> readGifAsList(File file) throws IOException {
+        if(file == null){
+            return null;
+        }
+        ImageReader reader = ImageIO.getImageReadersBySuffix("GIF").next();
+        ImageInputStream input = ImageIO.createImageInputStream(file);
+        reader.setInput(input);
+        ArrayList<BufferedImage> images = new ArrayList<>();
+        try {
+            for(int i = 0; i < reader.getNumImages(true);i++) {
+                images.add(reader.read(i));
+            }
+            return images;
+        }catch (Exception e){
+
+        }
+        return null;
     }
     public static void writeGIF(BufferedImage[] images, int delay,File output) throws FileNotFoundException, IOException {
 //        if(images.length < 1){

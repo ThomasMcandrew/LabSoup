@@ -16,7 +16,11 @@ public class TableModel extends AbstractTableModel {
             }
         }
     }
-
+    public void removeRows(int[] rows){
+        for(int i = 0; i < rows.length; i++){
+            for(int j = 0; j <)
+        }
+    }
     public void setValueAt(Object value, int row, int col) {
         checkSize(row,col);
         data[row][col] = value;

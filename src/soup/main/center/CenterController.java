@@ -30,7 +30,7 @@ public class CenterController extends WebDocumentPane {
         }
         return centerController;
     }
-    private static AbstractPanel[] panels = new AbstractPanel[]{new TextPanel(null,".txt"),new CSVPanel(null),new LayeredImagePanel(null) };
+    private static AbstractPanel[] panels = new AbstractPanel[]{new TextPanel(null,".txt"),new CSVPanel(null),new AnimatedImagePanel(null) };
 
     private CenterController(){
         setStyleId(StyleId.documentpane);
@@ -139,6 +139,7 @@ public class CenterController extends WebDocumentPane {
         }
         boolean set = false;
         String ext = file.getAbsolutePath().substring(file.getAbsolutePath().lastIndexOf("."));
+
         for(int i = 0; i < panels.length; i++){
             if(ext.endsWith(panels[i].ext)){
                 AbstractPanel temp = panels[i].newPanel(file);
@@ -166,8 +167,10 @@ public class CenterController extends WebDocumentPane {
         AbstractPanel p = null;
         for (int i = 0; i < list.size(); i++){
             p = (AbstractPanel) list.get(i).getComponent();
-            p.saveFile();
-            saveData += p.file.getAbsolutePath() + "\n";
+            if(!p.file.getAbsolutePath().startsWith(FileUtils.getSpeedReadFolder().getAbsolutePath())) {
+                p.saveFile();
+                saveData += p.file.getAbsolutePath() + "\n";
+            }
         }
         try {
             FileWriter writer = new FileWriter(new File(FileUtils.getLabSoupFolder() + File.separator + "cc.cfg"));

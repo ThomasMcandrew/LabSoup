@@ -2,6 +2,7 @@ package soup.main.editor.editors;
 
 import com.alee.extended.accordion.AccordionPane;
 import com.alee.extended.accordion.WebAccordion;
+import com.alee.extended.overlay.WebOverlay;
 import com.alee.laf.button.WebButton;
 import com.alee.laf.combobox.WebComboBox;
 import com.alee.laf.grouping.GroupPane;
@@ -11,9 +12,11 @@ import com.alee.laf.text.WebTextField;
 import com.alee.managers.style.StyleId;
 import soup.main.center.CenterController;
 import soup.main.center.panels.CSVPanel;
+import soup.main.center.panels.TableModel;
 import soup.main.editor.AbstractEditor;
 import soup.utils.FileUtils;
 import soup.utils.csv.CSVMathUtils;
+import soup.utils.csv.CSVUtils;
 import soup.utils.csv.Summary;
 
 import javax.swing.*;
@@ -27,21 +30,42 @@ public class CSVEditor extends AbstractEditor {
     public CSVEditor(){
 
     }
-
+    /*
+    Plan of attack
+    Data cleaning
+    Every regression possible
+    p value analysis
+    Charts for everything
+     */
     @Override
     protected void init() {
-//        WebAccordion accordion = new WebAccordion();
-//        accordion.add(initSummaryPanel(),0);
-//        accordion.add(initMathPanel(),1);
-        setLayout(new GridBagLayout());
-        GridBagConstraints c = new GridBagConstraints();
-        c.gridy = 0;
-        c.gridx = 0;
-        add(initSummaryPanel(),c);
-        c.gridy++;
-        add(initMathPanel(),c);
+        WebAccordion accordion = new WebAccordion();
+        accordion.addPane("Data Cleaning",initCleanPanel());
+        accordion.addPane("Math",initMathPanel());
+        accordion.addPane("Statistics",initSummaryPanel());
+        add(accordion);
 
     }
+
+    private WebPanel initCleanPanel() {
+        WebTextField input = new WebTextField(6);
+        WebTextField output = new WebTextField(6);
+
+        WebButton replace = new WebButton("Replace");
+        replace.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CSVUtils.findAndReplace(((TableModel)((CSVPanel)(CenterController.getCenterController().getSelectedDocument().getComponent())).getTable().getModel()),input.getText(), output.getText());
+            }
+        });
+        WebPanel panel = new WebPanel();
+        panel.setLayout(new FlowLayout());
+        panel.add(input);
+        panel.add(output);
+        panel.add(replace);
+        return panel;
+    }
+
     private WebPanel initSummaryPanel(){
         WebPanel summary = new WebPanel();
         summary.setLayout(new GridBagLayout());

@@ -24,7 +24,7 @@ public class LayeredImageEditor extends AbstractEditor {
         add.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ((LayeredImagePanel)(CenterController.getCenterController().getSelectedDocument().getComponent())).addImage(FileUtils.openImage());
+                ((LayeredImagePanel)(CenterController.getCenterController().getSelectedDocument().getComponent())).addImage(FileUtils.openImages());
             }
         });
         add(add);

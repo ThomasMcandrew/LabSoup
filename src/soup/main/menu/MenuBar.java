@@ -7,6 +7,7 @@ import com.alee.laf.menu.WebMenuItem;
 import com.alee.managers.style.StyleId;
 import soup.main.MainPanel;
 import soup.main.center.CenterController;
+import soup.main.center.panels.AnimatedImagePanel;
 import soup.main.center.panels.CSVPanel;
 import soup.main.center.panels.LayeredImagePanel;
 import soup.main.center.panels.TextPanel;
@@ -49,7 +50,7 @@ public class MenuBar extends JMenuBar {
         newGif.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                CenterController.getCenterController().newPanel(new LayeredImagePanel(null));
+                CenterController.getCenterController().newPanel(new AnimatedImagePanel(null));
             }
         });
         createNewFile.add(newText);
